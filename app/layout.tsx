@@ -32,7 +32,7 @@ export default function RootLayout({
         <div className="dark:bg-boxdark-2 dark:text-bodydark">
             <Provider store={store}>
               <PersistGate loading={null} persistor={persistor}>
-                <div className="flex overflow-hidden">
+                <div className="">
                   {/* { (headPathName.includes(pathname)) ? null :
                   <Sidebar
                     sidebarOpen={sidebarOpen}
