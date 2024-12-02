@@ -53,7 +53,7 @@ const SignIn: React.FC = () => {
   }
   return (
     <>
-      <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+      <div className="rounded-sm border w-full border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
         <div className="flex h-screen w-full">
           <div className="hidden w-full xl:block xl:w-1/2">
             <div className="py-17.5 px-26 text-center">
