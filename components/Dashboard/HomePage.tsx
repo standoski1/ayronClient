@@ -40,6 +40,7 @@ const HomePage: React.FC = () => {
     const { payload } = await dispatch(
       callGet({ header: headers, endpoint: `recommendations?cursor=${secPage}&limit=10` })
     );
+    console.log(payload.data)
     setUserData([...userData, ...payload?.data]);
     if (!payload?.data || payload?.data?.length < 10) {
       setHasMore(false);
@@ -50,8 +51,10 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="">
-      {postLoading && userData.length === 0 ? (
-        <Loader />
+      {postLoading && userData?.length === 0 ? (
+        <div className="w-full">
+          <Loader />
+        </div>
       ) : (
         <InfiniteScroll
           dataLength={userData?.length}
@@ -65,13 +68,13 @@ const HomePage: React.FC = () => {
           }
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {userData.map((data: any, i: number) => (
+            {userData?.map((data: any, i: number) => (
               <RecommendationCard key={i} data={data} i={i} />
             ))}
           </div>
         </InfiniteScroll>
       )}
-      {!postLoading && userData.length === 0 && (
+      {!postLoading && userData?.length === 0 && (
         <p className="text-center mt-5">No Data Available</p>
       )}
     </div>
