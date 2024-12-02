@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="">
+    <div className="w-full">
       {postLoading && userData?.length === 0 ? (
         <div className="w-full">
           <Loader />
@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
             </p>
           }
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {userData?.map((data: any, i: number) => (
               <RecommendationCard key={i} data={data} i={i} />
             ))}
