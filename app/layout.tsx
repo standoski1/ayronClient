@@ -45,7 +45,8 @@ export default function RootLayout({
                       setSidebarOpen={setSidebarOpen}
                     />}
                     <main className="overflow-y-auto">
-                      <div className={`${(widthPathName.includes(pathname)) ? null : "mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10"}`}>
+                      {/* <div className={`${(widthPathName.includes(pathname)) ? null : "mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10"}`}> */}
+                      <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
                         {children}
                       </div>
                     </main>
